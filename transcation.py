@@ -39,7 +39,7 @@ def trans_cat():
             mb.showinfo("Alert","Dear Customer, Your Money Transcation Successfully Your Account\n\tAccount Number : '%s'\n\tThe Amount You Deposited : %d"%(acc_no.get(),amount.get()))            
             
     elif trans=='with_draw':
-            if amount.get()<=bal:
+            if amount.get()<=bal-500:
                 import sqlite3
                 con = sqlite3.connect('bankdet.db')
                 cur = con.cursor()
